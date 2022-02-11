@@ -1,0 +1,301 @@
+/*grid-areas*/
+header {
+    grid-area: header;
+}
+.encabezado__logo {
+    grid-area: logo;
+}
+.encabezado__ubicacion {
+    grid-area: ubicup;
+}
+.nav__up {
+    grid-area: navup;
+}
+.img__up {
+    grid-area: imgup;
+}
+.img__up1 {
+    grid-area: imgup1;
+}
+.img__up2 {
+    grid-area: imgup2;
+}
+.productos {
+    grid-area: productos;
+}
+.productos__izquierda {
+    grid-area: prodizq;
+}
+.productos__derecha {
+    grid-area: proderec;
+}
+.productos__centro {
+    grid-area: procentro;
+}
+.nav__down {
+    grid-area: navdown;
+}
+footer {
+    grid-area: footer;
+}
+footer__caja1 {
+    grid-area: foot1;
+}
+footer__caja2 {
+    grid-area: foot2;
+}
+footer__caja3 {
+    grid-area: foot3;
+}
+.rrss {
+    grid-row: rrss;
+}
+.logoface {
+    grid-area: logoface;
+}
+.logoig {
+    grid-area: logoig;
+}
+.logotw {
+    grid-area: logotw;
+}
+/*Celular*/
+@media screen and (min-width: 320px) {
+    #main{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 15% auto auto auto auto auto;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-areas: "header" "navup" "imgup" "productos" "procentro" "footer";
+    }
+    .encabezado__logo {
+        padding: 10px;
+        text-align: center;
+    }
+    .nav__up {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;    
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        width: 100%;
+        height: 80px;
+        font-size: 18px;
+    }
+    .nav__up div {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .solopc {
+        display: none;
+    }
+    .img__up1 img, .img__up3 img, .imglink img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .img__up1, .img__up3, .imglink {
+        height: 100%;
+        width: 100%;
+    }
+    .productos {
+        display: flex;
+        flex-direction: column;    
+        justify-content: flex-start;
+        width: 100%; 
+    }
+    .productos__centro {
+        padding: 0px;  
+    }
+    .parallax {
+        position: relative;
+        background: url("../assets/img/img2.jpg") no-repeat fixed;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 220px;
+      }
+    .parallaxpages {
+        position: relative;
+        background: url("../assets/img/img2.jpg") no-repeat fixed;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 20px;
+    }
+    .texto__confondo {
+        font-size: 15px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column-reverse;
+        align-content: space-between;
+    }
+    .footer__caja1 {
+        text-align: center;
+    }
+    .footer__caja2 {
+        display: flex; 
+        flex-direction: column;
+        align-content: space-around;
+        text-align: center;
+    }
+    .footer__caja3 {
+        text-align: center;
+    }
+    .footer__caja3logosrrss {
+        display: grid;
+        grid-template-columns: 80px auto auto auto 80px;
+        grid-template-areas:". logoface logoig logotw .";
+    }
+}
+/*Pantalla de PC*/
+@media screen and (min-width: 900px) {
+    #main{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-areas:
+        "header header header"
+        "navup navup navup"
+        "imgup imgup imgup"
+        "productos productos productos"
+        "procentro procentro procentro"
+        "navdown navdown navdown"
+        "footer footer footer";
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+    }
+    #encabezado {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;        
+    }
+    .encabezado__logo {
+        padding: 10px;
+        text-align:start;
+    }
+    .nav__up {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;    
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        width: 100%;
+        height: 80px;
+        font-size: 22px;
+    }
+    .solopc {
+        display: block;
+    }
+    .img__up {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width:100%;
+        background-color: rgb(162, 199, 247);
+        justify-content: center;
+    }
+    .img__up1 img, .img__up2 img, .img__up3 img, .imglink img {
+        max-width: auto;
+        max-height: auto;
+        display: block;
+    }
+    .img__up1, .img__up2, .img__up3, .imglink {
+        height: auto;
+        width: auto;
+    }
+    .productos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;    
+        justify-content: space-between;
+        align-items: center;
+        align-content: space-around;
+        width: 100%;
+    }
+    .productos__izquierda {
+        padding-left: 5%;
+    }
+    .productos__centro {
+        display:flex;
+        padding: 0px;
+        align-items: center;
+        justify-content: center; 
+    }
+    .parallax {
+        position: relative;
+        background: url("../assets/img/img2.jpg") no-repeat fixed;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        min-height: 60px;
+    }
+    .parallaxpages {
+        position: relative;
+        background: url("../assets/img/img2.jpg") no-repeat fixed;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+    .texto__confondo {
+        font-size: 20px;
+    }
+    .nav__down{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;    
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        width: 100%;
+        height: 80px;
+        font-size: 22px;
+    }
+    footer {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;    
+        justify-content: space-around;
+        align-items: center;
+        align-content: space-around;
+        width: 100%;
+        background-color: #0d47a1;
+    }
+    .footer__caja1 {
+        text-align: center;
+        order: 2;
+        padding: 30px;
+    }
+    .footer__caja2 {
+        display: flex; 
+        flex-direction: column;
+        align-content: space-around;
+        text-align: center;
+        order: 1;
+        background-color: white;
+        color: #051936;
+        padding: 18px;
+    }
+    .footer__caja3 {
+        text-align: center;
+        order: 3;
+    }
+    .footer__caja3logosrrss {
+        display: grid;
+        grid-template-columns: 20px auto auto auto 20px;
+        grid-template-areas:". logoface logoig logotw .";
+    }
+
+}

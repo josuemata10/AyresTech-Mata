@@ -1,0 +1,53 @@
+/*Eliminar formato por defecto en hipervínculos*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/*Formato general*/
+body {
+  font-family: "Raleway", sans-serif;
+  src: url(../assets/fonts/Raleway.ttf);
+  background-color: #4d82cb;
+  color: black;
+}
+#main {
+  width: 95%;
+  height: 600px;
+}
+#encabezado, .footer__caja1{
+  background-color: #0d47a1;
+  color: white;
+}
+.logo__ayrestech {
+  font-size: 50px;
+}
+.ubicacion__head {
+ font-size: 25px; 
+}
+.nav__up, .nav__down {
+  background-color: #1565c0;
+  color: white;
+  margin-right: 8px;
+}
+.productos {
+  background-color: white;
+}
+.productos__izquierda {
+  background-color: white;
+}
+.texto__confondo {
+  background-color: rgba(5.1%, 27.8%, 63.1%, .7);
+  color: white;
+  text-align: center;
+}
+footer {
+  color: #051936;
+  background: #82b1ff;
+}
+.footer__caja3, .rrss {
+  padding: 10px;
+  background-color: white;
+}
+.rrss, #ubicacion{
+  font-size: 19px;
+}

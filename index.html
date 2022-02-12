@@ -18,6 +18,7 @@
     <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
 </head>
 
@@ -33,7 +34,7 @@
             <div></div>
             <!--Ubicación del local físico-->
             <div class="encabezado__ubicacion">
-                <a class="ubicacion__head solopc" href="#ubicacion">Estamos en Palermo</a>
+                <a class="ubicacion__head solopc animate__animated animate__heartBeat" href="#ubicacion">Estamos en Palermo</a>
             </div>
         </header>
         <nav class="nav__up">
@@ -96,7 +97,7 @@
         <!--Inicio de footer-->
         <footer>
             <div class="footer__caja1">
-                <div><a class="logo__ayrestech">AyresTech</a></div>
+                <div class="animate__animated animate__pulse animate__infinite	infinite"><a class="logo__ayrestech">AyresTech</a></div>
                 <div class="autoria solopc"><a>Creado por<a href="https://www.linkedin.com/in/amadorjosuemata" target="_blank"> Amador Josué Mata</a></div>
                 <div><a class="solopc" href="#encabezado">Ir arriba</a></div>
             </div>
@@ -117,6 +118,11 @@
             </div>
         </footer>
     </div>
+    <script src="js/wow.min.js"></script>
+    <script>
+       new WOW().init();
+    </script>
+   
 </body>
 
 </html>

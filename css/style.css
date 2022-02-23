@@ -1,76 +1,93 @@
-/*Eliminar formato por defecto en hipervínculos y agregar efecto*/
-a:visited, a:link {
-  color: inherit;
-  text-decoration: none;
-}
-a {
+nav a {
   position: relative;
   display: block;
   padding: 5px;
 }
-a::before {
+
+nav a::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
   height: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#4d82cb), color-stop(#ffffff), to(#1565c0));
   background: linear-gradient(to right, #4d82cb, #ffffff, #1565c0);
   z-index: 1;
-  transform: scaleX(0);
-  transform-origin: center;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
   transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
-a:hover::before {
-  transform-origin: center;
-  transform: scaleX(1);
-  transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+
+nav a:hover::before {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
+          transition-timing-function: cubic-bezier(0.2, 1, 0.82, 0.94);
 }
-/*Formato general*/
+
+/*formato*/
 body {
-  font-family: "Raleway", sans-serif;
-  src: url(../assets/fonts/Raleway.ttf);
   background-color: #4d82cb;
   color: black;
-}
-#main {
   width: 95%;
   height: 600px;
+  font-family: "Raleway", sans-serif;
+  src: url(../assets/fonts/Raleway.ttf);
 }
-#encabezado, .footer__caja1{
+
+body a:visited, body a:link {
+  color: inherit;
+  text-decoration: none;
+}
+
+body #encabezado, body .footer__caja1 {
   background-color: #0d47a1;
   color: white;
 }
-.logo__ayrestech {
+
+body .logo__ayrestech {
   font-size: 50px;
 }
-.ubicacion__head {
- font-size: 25px; 
+
+body .ubicacion__head {
+  font-size: 25px;
 }
-.nav__up, .nav__down {
+
+body .nav__up, body .nav__down {
   background-color: #1565c0;
   color: white;
   margin-right: 8px;
 }
-.productos {
+
+body .productos, body .productos__izquierda {
   background-color: white;
 }
-.productos__izquierda {
-  background-color: white;
-}
-.texto__confondo {
-  background-color: rgba(5.1%, 27.8%, 63.1%, .7);
+
+body .texto__confondo {
+  background-color: rgba(13, 71, 161, 0.7);
   color: white;
   text-align: center;
 }
-footer {
+
+body footer {
   color: #051936;
-  background: #82b1ff;
+  background: #0d47a1;
 }
-.footer__caja3, .rrss {
+
+body footer .footer__caja3, body footer .rrss {
   padding: 10px;
   background-color: white;
 }
-.rrss, #ubicacion{
+
+body .rrss, body #ubicacion {
   font-size: 19px;
 }
+/*# sourceMappingURL=style.css.map */

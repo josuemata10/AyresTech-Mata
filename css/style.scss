@@ -1,0 +1,49 @@
+@import "colores";
+@import "hovernav";
+/*formato*/
+body {
+    background-color: $fondoprincipal;
+    color: $negro;
+    width: 95%;
+    height: 600px;
+    font-family: "Raleway", sans-serif;
+    src: url(../assets/fonts/Raleway.ttf);
+    a:visited, a:link {
+        color: inherit;
+        text-decoration: none;
+    }
+    #encabezado, .footer__caja1 {
+        background-color: $fondoheadfooter;
+        color: $blanco;
+    }
+    .logo__ayrestech {
+        font-size: 50px;
+    }
+    .ubicacion__head {
+        font-size: 25px; 
+    }
+    .nav__up, .nav__down {
+        background-color: $fondonav;
+        color: $blanco;
+        margin-right: 8px;
+    }
+    .productos, .productos__izquierda {
+        background-color: $blanco;
+    }
+    .texto__confondo {
+        background-color: $azultransparentoso;
+        color: $blanco;
+        text-align: center;
+    }
+    footer {
+        color: $azulmarino;
+        background: $fondoheadfooter;
+        .footer__caja3, .rrss {
+            padding: 10px;
+            background-color: $blanco;
+        }
+    }
+    .rrss, #ubicacion{
+        font-size: 19px;
+    }
+}

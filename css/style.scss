@@ -1,8 +1,11 @@
 @import "colores";
 @import "hovernav";
 /*formato*/
-body {
-    background-color: $fondoprincipal;
+@mixin fondo {
+    background-color: $fondoheadfooter;
+}
+body {   
+    @include fondo;
     color: $negro;
     width: 95%;
     height: 600px;
@@ -12,9 +15,12 @@ body {
         color: inherit;
         text-decoration: none;
     }
-    #encabezado, .footer__caja1 {
-        background-color: $fondoheadfooter;
+    #encabezado {
+        @include fondo;
         color: $blanco;
+    }
+    .footer__caja1 {
+        @extend #encabezado;
     }
     .logo__ayrestech {
         font-size: 50px;
@@ -22,13 +28,19 @@ body {
     .ubicacion__head {
         font-size: 25px; 
     }
-    .nav__up, .nav__down {
+    .nav__up {
         background-color: $fondonav;
         color: $blanco;
         margin-right: 8px;
     }
-    .productos, .productos__izquierda {
+    .nav__down {
+        @extend .nav__up;
+    }
+    .productos {
         background-color: $blanco;
+    }
+    .productos__izquierda {
+        @extend .productos;
     }
     .texto__confondo {
         background-color: $azultransparentoso;
@@ -37,13 +49,16 @@ body {
     }
     footer {
         color: $azulmarino;
-        background: $fondoheadfooter;
-        .footer__caja3, .rrss {
+        @include fondo;
+        .footer__caja3 {
             padding: 10px;
             background-color: $blanco;
         }
+        .rrss {
+            @extend .footer__caja3;
+        }
     }
     .rrss, #ubicacion{
-        font-size: 19px;
+        font-size: 19px;                   
     }
 }

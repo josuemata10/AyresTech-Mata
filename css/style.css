@@ -35,7 +35,7 @@ nav a:hover::before {
 
 /*formato*/
 body {
-  background-color: #4d82cb;
+  background-color: #0d47a1;
   color: black;
   width: 95%;
   height: 600px;
@@ -79,7 +79,7 @@ body .texto__confondo {
 
 body footer {
   color: #051936;
-  background: #0d47a1;
+  background-color: #0d47a1;
 }
 
 body footer .footer__caja3, body footer .rrss {

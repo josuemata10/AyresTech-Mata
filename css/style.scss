@@ -7,7 +7,7 @@
 body {   
     @include fondo;
     color: $negro;
-    width: 95%;
+    width: 100%;
     height: 600px;
     font-family: "Raleway", sans-serif;
     src: url(../assets/fonts/Raleway.ttf);
@@ -55,7 +55,8 @@ body {
             background-color: $blanco;
         }
         .rrss {
-            @extend .footer__caja3;
+            padding: 10px;
+            background-color: $blanco;
         }
     }
     .rrss, #ubicacion{

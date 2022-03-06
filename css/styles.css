@@ -144,6 +144,8 @@ footer__caja3 {
         flex-direction: column;
         align-content: space-around;
         text-align: center;
+        background-color: #4d82cb;
+        color: #051936;
     }
     .footer__caja3 {
         text-align: center;

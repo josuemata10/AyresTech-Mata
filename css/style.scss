@@ -50,12 +50,13 @@ body {
     footer {
         color: $azulmarino;
         @include fondo;
-        .footer__caja2 {
+        .footer__caja3 {
             padding: 10px;
             background-color: $blanco;
         }
         .rrss {
-            @extend .footer__caja2;
+            padding: 10px;
+            background-color: $blanco;
         }
     }
     .rrss, #ubicacion{
